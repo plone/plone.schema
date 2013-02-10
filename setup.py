@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '1.3.1.dev0'
+version = '0.1.dev0'
 
 setup(name='plone.schema',
       version=version,
@@ -16,7 +16,7 @@ setup(name='plone.schema',
       keywords='plone schema ttw',
       author='David Glick',
       author_email='dglick@gmail.com',
-      url='http://svn.plone.org/svn/plone/plone.schemaeditor',
+      url='https://github.com/plone/plone.schema',
       license='BSD',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['plone'],
@@ -24,5 +24,9 @@ setup(name='plone.schema',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'plone.app.dexterity',
       ],
+      extras_require={
+        'test': ['plone.app.testing'],
+        },
       )
