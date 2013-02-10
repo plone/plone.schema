@@ -5,6 +5,8 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="plone.schema">
 
+    <i18n:registerTranslations directory="locales" />
+
     <!-- Configure plone.supermodel support if available -->
     <include zcml:condition="installed plone.supermodel"
         file="handler.zcml"
