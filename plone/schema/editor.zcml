@@ -6,9 +6,18 @@
     <implements interface=".editor.IURI" />
   </class>
 
+  <class class="plone.schema.field.Email">
+    <implements interface=".editor.IEmail" />
+  </class>
+
     <utility
         name="zope.schema._field.URI"
         component=".editor.URIFactory"
+        />
+
+    <utility
+        name="plone.schema.field.Email"
+        component=".editor.EmailFactory"
         />
 
 </configure>
