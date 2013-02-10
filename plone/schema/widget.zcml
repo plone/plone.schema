@@ -8,12 +8,20 @@
     <include package="z3c.form" />
 
     <adapter factory=".widget.URIFieldWidget" />
-    
+    <adapter factory=".widget.EmailFieldWidget" />
+
     <z3c:widgetTemplate
       mode="display"
       widget=".widget.IURIWidget"
       layer="z3c.form.interfaces.IFormLayer"
       template="uri_display.pt"
+      />
+
+    <z3c:widgetTemplate
+      mode="display"
+      widget=".widget.IEmailWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="email_display.pt"
       />
 
 </configure>
