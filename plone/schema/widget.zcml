@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="plone.schema">
+
+    <include package="z3c.form" file="meta.zcml" />
+    <include package="z3c.form" />
+
+    <adapter factory=".widget.URIFieldWidget" />
+    
+    <z3c:widgetTemplate
+      mode="display"
+      widget=".widget.IURIWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="uri_display.pt"
+      />
+
+</configure>

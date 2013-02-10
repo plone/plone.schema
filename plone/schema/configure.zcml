@@ -2,7 +2,22 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="plone.schema">
 
+    <!-- Configure plone.supermodel support if available -->
+    <include zcml:condition="installed plone.supermodel"
+        file="handler.zcml"
+        />
+
+    <!-- Configure z3c.form widget if z3c.form is installed -->
+    <include zcml:condition="installed z3c.form"
+        file="widget.zcml"
+        />
+
+    <!-- Configure plone.schemaeditor field factory if installed -->
+    <include zcml:condition="installed plone.schemaeditor"
+        file="editor.zcml"
+        />
 
 </configure>
