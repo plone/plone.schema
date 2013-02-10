@@ -9,8 +9,9 @@
         name="plone.schema.URI"
         />
 
-    <adapter
-        factory=".handler.URIToUnicode"
+    <utility
+        component=".handler.EmailHandler"
+        name="plone.schema.field.Email"
         />
 
 </configure>
