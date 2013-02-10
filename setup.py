@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '0.1.dev0'
+version = '0.1'
 
 setup(name='plone.schema',
       version=version,
@@ -13,9 +13,9 @@ setup(name='plone.schema',
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: BSD License",
         ],
-      keywords='plone schema ttw',
-      author='David Glick',
-      author_email='dglick@gmail.com',
+      keywords='plone schema',
+      author='',
+      author_email='',
       url='https://github.com/plone/plone.schema',
       license='BSD',
       packages=find_packages(exclude=['ez_setup']),
