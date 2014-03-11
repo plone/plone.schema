@@ -1,13 +1,6 @@
-try:
-    from plone.supermodel.exportimport import BaseHandler
-    HAVE_SUPERMODEL = True
-except ImportError:
-    HAVE_SUPERMODEL = False
+from plone.supermodel.exportimport import BaseHandler
+from zope.schema import URI
+from plone.schema.email import Email
 
-if HAVE_SUPERMODEL:
-    from zope.schema import URI
-
-    from plone.schema.field import Email
-
-    URIHandler = BaseHandler(URI)
-    EmailHandler = BaseHandler(Email)
+URIHandler = BaseHandler(URI)
+EmailHandler = BaseHandler(Email)

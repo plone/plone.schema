@@ -7,8 +7,8 @@
     <include package="z3c.form" file="meta.zcml" />
     <include package="z3c.form" />
 
-    <adapter factory=".widget.URIFieldWidget" />
-    <adapter factory=".widget.EmailFieldWidget" />
+    <adapter factory=".uri.URIFieldWidget" />
+    <adapter factory=".email.EmailFieldWidget" />
 
     <z3c:widgetTemplate
       mode="display"
