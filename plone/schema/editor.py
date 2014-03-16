@@ -1,6 +1,6 @@
 from plone.schema import _
 from plone.schema.email import Email
-from plone.schema.interfaces import IEmail
+from plone.schema.email import IEmail
 from plone.schemaeditor.fields import FieldFactory
 from zope.interface import Attribute
 from zope.schema import URI
