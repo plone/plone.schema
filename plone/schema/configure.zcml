@@ -29,7 +29,7 @@
         <implements interface=".editor.IURI" />
       </class>
 
-      <class class="plone.schema.field.Email">
+      <class class="plone.schema.email.Email">
         <implements interface=".editor.IEmail" />
       </class>
 
