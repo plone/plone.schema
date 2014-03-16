@@ -12,16 +12,16 @@
 
     <z3c:widgetTemplate
       mode="display"
-      widget=".widget.IURIWidget"
+      widget=".uri.IURIWidget"
       layer="z3c.form.interfaces.IFormLayer"
-      template="uri_display.pt"
+      template="templates/uri_display.pt"
       />
 
     <z3c:widgetTemplate
       mode="display"
-      widget=".widget.IEmailWidget"
+      widget=".email.IEmailWidget"
       layer="z3c.form.interfaces.IFormLayer"
-      template="email_display.pt"
+      template="templates/email_display.pt"
       />
 
 </configure>
