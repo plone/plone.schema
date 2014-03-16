@@ -25,6 +25,7 @@ setup(name='plone.schema',
       install_requires=[
           'setuptools',
           'plone.app.dexterity',
+          'plone.app.z3cform'
       ],
       extras_require={
         'test': ['plone.app.testing'],
