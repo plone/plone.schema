@@ -8,6 +8,7 @@ from zope.schema.interfaces import IURI
 
 from plone.app.z3cform.interfaces import IPloneFormLayer
 
+
 class IURIWidget(ITextWidget):
     """ URI Widget """
 
