@@ -1,4 +1,4 @@
-1.0a1 (unreleased)
+1.0a1 (2014-04-17)
 ------------------
 
 - Initial release.
