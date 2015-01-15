@@ -28,8 +28,14 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'plone.app.dexterity',
-        'plone.app.z3cform'
+        'plone.app.z3cform',
+        'plone.schemaeditor',
+        'plone.supermodel',
+        'z3c.form',
+        'zope.component'
+        'zope.i18nmessageid',
+        'zope.interface',
+        'zope.schema',
     ],
     extras_require={
         'test': ['plone.app.testing'],
