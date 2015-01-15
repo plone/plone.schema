@@ -1,7 +1,8 @@
 1.0a2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix install_requires to specify correct dependencies.
+  [gforcada]
 
 
 1.0a1 (2014-04-17)
