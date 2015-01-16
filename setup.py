@@ -29,8 +29,6 @@ setup(
     install_requires=[
         'setuptools',
         'plone.app.z3cform',
-        'plone.schemaeditor',
-        'plone.supermodel',
         'z3c.form',
         'zope.component'
         'zope.i18nmessageid',
