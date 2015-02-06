@@ -30,7 +30,7 @@ setup(
         'setuptools',
         'plone.app.z3cform',
         'z3c.form',
-        'zope.component'
+        'zope.component',
         'zope.i18nmessageid',
         'zope.interface',
         'zope.schema',
