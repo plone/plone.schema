@@ -21,6 +21,7 @@ setup(
     author='Plone Foundation',
     author_email='plone-developers@lists.sourceforge.net',
     url='http://plone.org/',
+    description='Plone specific extensions and fields for zope schematas',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['plone'],
