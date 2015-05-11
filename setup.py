@@ -8,7 +8,7 @@ long_description = open("README.rst").read() + "\n" + \
 setup(
     name='plone.schema',
     version=version,
-    description="",
+    description='Plone specific extensions and fields for zope schematas',
     long_description=long_description,
     classifiers=[
         "Framework :: Zope2",
@@ -21,7 +21,6 @@ setup(
     author='Plone Foundation',
     author_email='plone-developers@lists.sourceforge.net',
     url='http://plone.org/',
-    description='Plone specific extensions and fields for zope schematas',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['plone'],
