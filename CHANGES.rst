@@ -1,7 +1,9 @@
 1.0a2 (unreleased)
 ------------------
 
-- Fix install_requires to specify correct dependencies.
+Fixes:
+
+- Fixed install_requires to specify correct dependencies.
   [gforcada]
 
 
