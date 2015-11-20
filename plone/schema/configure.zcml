@@ -5,8 +5,6 @@
     xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="plone">
 
-    <i18n:registerTranslations directory="locales" />
-
     <!-- Configure widgets if z3c.form is installed -->
     <include zcml:condition="installed z3c.form" package=".browser" />
 
