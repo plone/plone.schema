@@ -3,6 +3,9 @@
 
 Fixes:
 
+- Moved translation to plone.app.locales
+  [staeff]
+
 - Fixed install_requires to specify correct dependencies.
   [gforcada]
 

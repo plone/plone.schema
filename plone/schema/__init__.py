@@ -1,5 +1,5 @@
 from zope.i18nmessageid import MessageFactory
-_ = MessageFactory('plone.schema')
+_ = MessageFactory('plone')
 
 
 from .email import Email
