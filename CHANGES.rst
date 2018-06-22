@@ -3,7 +3,8 @@
 
 New:
 
-- *add item here*
+- Add new JSONField, JSONSchema auto validated.
+  [sneridagh]
 
 Fixes:
 
