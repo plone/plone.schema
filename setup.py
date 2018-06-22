@@ -32,6 +32,7 @@ setup(
     install_requires=[
         'setuptools',
         'plone.app.z3cform',
+        'jsonschema',
         'z3c.form',
         'zope.component',
         'zope.i18nmessageid',
