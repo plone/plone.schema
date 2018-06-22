@@ -1,9 +1,9 @@
 from plone.schema import _
 from zope.interface import Attribute
 from zope.interface import implementer
-from zope.schema.interfaces import IField
 from zope.schema import Field
 from zope.schema._bootstrapinterfaces import WrongType
+from zope.schema.interfaces import IField
 from zope.schema.interfaces import WrongContainedType
 
 import json
