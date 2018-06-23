@@ -1,14 +1,10 @@
 1.0.1 (unreleased)
 ------------------
 
-New:
+New Features:
 
-- Add new JSONField, JSONSchema auto validated.
+- Add new JSONField field and JSONSchema auto validation.
   [sneridagh]
-
-Fixes:
-
-- *add item here*
 
 
 1.0.0 (2016-02-25)
