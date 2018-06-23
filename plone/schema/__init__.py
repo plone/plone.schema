@@ -8,6 +8,9 @@ from .email import IEmail
 from .path import Path
 from .path import IPath
 
+from .jsonfield import JSONField
+from .jsonfield import IJSONField
+
 # zope.schema convenience imports
 from zope.schema._field import ASCII
 from zope.schema._field import ASCIILine
