@@ -1,18 +1,10 @@
 1.1.1 (unreleased)
 ------------------
 
-Breaking changes:
-
-- *add item here*
-
 New features:
 
 - Improve and complete Plone integration of the JSONField (z3c.form, plone.supermodel, plone.schemaeditor)
   [sneridagh]
-
-Bug fixes:
-
-- *add item here*
 
 
 1.1.0 (2018-06-23)
