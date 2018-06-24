@@ -7,7 +7,8 @@ Breaking changes:
 
 New features:
 
-- *add item here*
+- Improve and complete Plone integration of the JSONField (z3c.form, plone.supermodel, plone.schemaeditor)
+  [sneridagh]
 
 Bug fixes:
 
