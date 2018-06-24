@@ -9,6 +9,7 @@
 
     <adapter factory=".uri.URIFieldWidget" />
     <adapter factory=".email.EmailFieldWidget" />
+    <adapter factory=".jsonfield.JSONFieldWidget" />
 
     <z3c:widgetTemplate
       mode="display"
@@ -23,5 +24,7 @@
       layer="z3c.form.interfaces.IFormLayer"
       template="templates/email_display.pt"
       />
+
+    <adapter factory=".jsonfield.JSONDataConverter" />
 
 </configure>

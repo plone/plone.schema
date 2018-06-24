@@ -19,6 +19,12 @@
           component=".handler.EmailHandler"
           name="plone.schema.email.Email"
           />
+
+      <utility
+          component=".handler.JSONHandler"
+          name="plone.schema.jsonfield.JSONField"
+          />
+
     </configure>
 
     <!-- Configure plone.schemaeditor field factory if installed -->
@@ -31,6 +37,10 @@
         <implements interface=".editor.IEmail" />
       </class>
 
+      <class class="plone.schema.jsonfield.JSONField">
+        <implements interface=".editor.IJSON" />
+      </class>
+
       <utility
           name="zope.schema._field.URI"
           component=".editor.URIFactory"
@@ -40,6 +50,12 @@
           name="plone.schema.email.Email"
           component=".editor.EmailFactory"
           />
+
+      <utility
+          name="plone.schema.jsonfield.JSONField"
+          component=".editor.JSONFactory"
+          />
+
     </configure>
 
 </configure>
