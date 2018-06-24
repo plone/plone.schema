@@ -5,6 +5,7 @@ from zope.schema import Field
 from zope.schema._bootstrapinterfaces import WrongType
 from zope.schema.interfaces import IField
 from zope.schema.interfaces import WrongContainedType
+from zope.schema.interfaces import IFromUnicode
 
 import json
 import jsonschema
@@ -25,7 +26,7 @@ class IJSONField(IField):
     )
 
 
-@implementer(IJSONField)
+@implementer(IJSONField, IFromUnicode)
 class JSONField(Field):
 
     def __init__(self, schema=DEFAULT_JSON_SCHEMA, **kw):
@@ -45,3 +46,8 @@ class JSONField(Field):
             jsonschema.validate(value, self.json_schema)
         except jsonschema.ValidationError as e:
             raise WrongContainedType(e.message, self.__name__)
+
+    def fromUnicode(self, value):
+        v = json.loads(value)
+        self.validate(v)
+        return v
