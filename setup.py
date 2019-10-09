@@ -11,6 +11,7 @@ setup(
     description='Plone specific extensions and fields for zope schematas',
     long_description=long_description,
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Framework :: Zope2",
         "Framework :: Zope :: 4",
         "Framework :: Plone",
