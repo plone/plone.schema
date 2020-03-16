@@ -7,6 +7,7 @@ from zope.schema.interfaces import IField
 from zope.schema.interfaces import WrongContainedType
 from zope.schema.interfaces import IFromUnicode
 
+import ast
 import json
 import jsonschema
 
@@ -48,6 +49,30 @@ class JSONField(Field):
             raise WrongContainedType(e.message, self.__name__)
 
     def fromUnicode(self, value):
-        v = json.loads(value)
+        """ Get value from unicode:
+
+        value can be a valid JSON object:
+
+            >>> JSONField().fromUnicode('{"items": []}')
+            {'items': []}
+
+        It can be a Pyhon object stored as string:
+
+            >>> JSONField().fromUnicode("{'items': []}")
+            {'items': []}
+
+        Or a Python object:
+
+            >>> JSONField().fromUnicode({'items': []})
+            {'items': []}
+
+        """
+        try:
+            v = json.loads(value)
+        except json.JSONDecodeError:
+            v = ast.literal_eval(value)
+        except TypeError:
+            v = value
+
         self.validate(v)
         return v
