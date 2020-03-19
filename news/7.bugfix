@@ -1,0 +1,2 @@
+Fix JSONField with default values saved to `model_source` XML
+[avoinea]

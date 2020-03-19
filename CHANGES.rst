@@ -5,12 +5,6 @@
 
 .. towncrier release notes start
 
-1.2.1.dev0 (unreleased)
------------------------
-
-- Fix JSONField with default values saved to `model_source` XML
-  [avoinea]
-
 1.2.0 (2018-06-24)
 ------------------
 
