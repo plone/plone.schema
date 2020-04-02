@@ -46,7 +46,8 @@ setup(
         'zope.interface',
         'zope.schema',
     ],
-    extras_require={
-        'test': ['plone.app.testing'],
-    },
+    extras_require={'test': [
+        'six',
+        'plone.app.testing'
+    ]},
 )
