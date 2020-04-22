@@ -5,6 +5,19 @@
 
 .. towncrier release notes start
 
+1.2.1 (2020-04-22)
+------------------
+
+Bug fixes:
+
+
+- Minor packaging updates. (#1)
+- Fix JSONField with default values saved to `model_source` XML
+  [avoinea] (#7)
+- Initialize towncrier.
+  [gforcada] (#2548)
+
+
 1.2.0 (2018-06-24)
 ------------------
 
