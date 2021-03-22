@@ -17,27 +17,24 @@ except ImportError:
     JSONDecodeError = ValueError
 
 
-DEFAULT_JSON_SCHEMA = json.dumps({
-    'type': 'object',
-    'properties': {}
-})
+DEFAULT_JSON_SCHEMA = json.dumps({"type": "object", "properties": {}})
 
 
 class IJSONField(IField):
     """A text field that stores A JSON."""
 
-    schema = Attribute(
-        "schema",
-        _("The JSON schema string serialization.")
-    )
+    schema = Attribute("schema", _("The JSON schema string serialization."))
 
 
 @implementer(IJSONField, IFromUnicode)
 class JSONField(Field):
-
-    def __init__(self, schema=DEFAULT_JSON_SCHEMA, **kw):
+    def __init__(self, schema=DEFAULT_JSON_SCHEMA, widget=None, **kw):
         if not isinstance(schema, str):
             raise WrongType
+        if widget and not isinstance(widget, str):
+            raise WrongType
+
+        self.widget = widget
 
         try:
             self.json_schema = json.loads(schema)
@@ -54,7 +51,7 @@ class JSONField(Field):
             raise WrongContainedType(e.message, self.__name__)
 
     def fromUnicode(self, value):
-        """ Get value from unicode.
+        """Get value from unicode.
 
         Value can be a valid JSON object:
 
