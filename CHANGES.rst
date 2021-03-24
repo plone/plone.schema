@@ -5,6 +5,16 @@
 
 .. towncrier release notes start
 
+1.3.0 (2021-03-24)
+------------------
+
+New features:
+
+
+- Adjust JSONField to include widget name
+  [sneridagh] (#10)
+
+
 1.2.1 (2020-04-22)
 ------------------
 
