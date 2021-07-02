@@ -1,0 +1,1 @@
+Add field attribute 'widget' to field Dict from zope.schema. [ksuess]
