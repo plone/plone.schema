@@ -11,6 +11,9 @@ from .path import IPath
 from .jsonfield import JSONField
 from .jsonfield import IJSONField
 
+from .dict import Dict
+from zope.schema.interfaces import IDict
+
 # zope.schema convenience imports
 from zope.schema._field import ASCII
 from zope.schema._field import ASCIILine
@@ -22,7 +25,6 @@ from zope.schema._field import Container
 from zope.schema._field import Date
 from zope.schema._field import Datetime
 from zope.schema._field import Decimal
-from zope.schema._field import Dict
 from zope.schema._field import DottedName
 from zope.schema._field import Field
 from zope.schema._field import Float
