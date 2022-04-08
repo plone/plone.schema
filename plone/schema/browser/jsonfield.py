@@ -43,7 +43,7 @@ class JSONDataConverter(object):
         """See interfaces.IDataConverter"""
         if value is self.field.missing_value:
             return u''
-        return json.dumps(value)
+        return json.dumps(value, indent=True)
 
     def toFieldValue(self, value):
         """See interfaces.IDataConverter"""
