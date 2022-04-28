@@ -1,1 +1,0 @@
-Use indent in json.dumps to make JSON readable in the widget [MrTango]

@@ -5,6 +5,15 @@
 
 .. towncrier release notes start
 
+1.4.0 (2022-04-28)
+------------------
+
+New features:
+
+
+- Use indent in json.dumps to make JSON readable in the widget [MrTango] (#16)
+
+
 1.3.0 (2021-03-24)
 ------------------
 
