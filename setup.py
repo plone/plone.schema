@@ -30,7 +30,7 @@ setup(
     keywords='plone schema',
     author='Plone Foundation',
     author_email='plone-developers@lists.sourceforge.net',
-    url='http://plone.org/',
+    url='https://github.com/plone/plone.schema',
     license='BSD',
     packages=find_packages(),
     namespace_packages=['plone'],
