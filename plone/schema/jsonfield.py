@@ -1,20 +1,19 @@
-import ast
-import json
-import jsonschema
-from plone.schema import _
+from json import JSONDecodeError
+from zope.i18nmessageid import MessageFactory
 from zope.interface import Attribute
 from zope.interface import implementer
 from zope.schema import Field
 from zope.schema._bootstrapinterfaces import WrongType
 from zope.schema.interfaces import IField
-from zope.schema.interfaces import WrongContainedType
 from zope.schema.interfaces import IFromUnicode
+from zope.schema.interfaces import WrongContainedType
 
-try:
-    from json import JSONDecodeError
-except ImportError:
-    # Python 2
-    JSONDecodeError = ValueError
+import ast
+import json
+import jsonschema
+
+
+_ = MessageFactory("plone")
 
 
 DEFAULT_JSON_SCHEMA = json.dumps({"type": "object", "properties": {}})
@@ -40,10 +39,10 @@ class JSONField(Field):
             self.json_schema = json.loads(schema)
         except ValueError:
             raise WrongType
-        super(JSONField, self).__init__(**kw)
+        super().__init__(**kw)
 
     def _validate(self, value):
-        super(JSONField, self)._validate(value)
+        super()._validate(value)
 
         try:
             jsonschema.validate(value, self.json_schema)

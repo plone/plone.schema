@@ -1,15 +1,9 @@
-from zope.i18nmessageid import MessageFactory
-_ = MessageFactory('plone')
-
-
 from .email import Email
 from .email import IEmail
-
-from .path import Path
-from .path import IPath
-
-from .jsonfield import JSONField
 from .jsonfield import IJSONField
+from .jsonfield import JSONField
+from .path import IPath
+from .path import Path
 
 # zope.schema convenience imports
 from zope.schema._field import ASCII

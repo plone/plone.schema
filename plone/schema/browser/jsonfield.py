@@ -1,36 +1,40 @@
-from zope.component import adapter
-from zope.interface import implementer
-from z3c.form.interfaces import ITextAreaWidget
-from z3c.form.interfaces import IFieldWidget
+from ..interfaces import IFormLayer
+from ..jsonfield import IJSONField
 from z3c.form.browser.textarea import TextAreaWidget
-from z3c.form.widget import FieldWidget
 from z3c.form.interfaces import IDataConverter
+from z3c.form.interfaces import IFieldWidget
+from z3c.form.interfaces import ITextAreaWidget
 from z3c.form.interfaces import IWidget
-from plone.app.z3cform.interfaces import IPloneFormLayer
+from z3c.form.widget import FieldWidget
+from zope.component import adapter
 from zope.component import adapts
-from plone.schema.jsonfield import IJSONField
+from zope.i18nmessageid import MessageFactory
+from zope.interface import implementer
 
 import json
 
 
+_ = MessageFactory("plone")
+
+
 class IJSONFieldWidget(ITextAreaWidget):
-    """ JSON Widget """
+    """JSON Widget"""
 
 
 @implementer(IJSONFieldWidget)
 class JSONWidget(TextAreaWidget):
-    klass = u'json-widget'
+    klass = "json-widget"
     value = None
 
 
-@adapter(IJSONField, IPloneFormLayer)
+@adapter(IJSONField, IFormLayer)
 @implementer(IFieldWidget)
 def JSONFieldWidget(field, request):
     return FieldWidget(field, JSONWidget(request))
 
 
 @implementer(IDataConverter)
-class JSONDataConverter(object):
+class JSONDataConverter:
     """A JSON data converter."""
 
     adapts(IJSONField, IWidget)
@@ -42,13 +46,13 @@ class JSONDataConverter(object):
     def toWidgetValue(self, value):
         """See interfaces.IDataConverter"""
         if value is self.field.missing_value:
-            return u''
+            return ""
         return json.dumps(value, indent=True)
 
     def toFieldValue(self, value):
         """See interfaces.IDataConverter"""
 
-        if value == u'':
+        if value == "":
             return self.field.missing_value
 
         return self.field.fromUnicode(value)
