@@ -39,11 +39,10 @@ setup(
         "jsonschema",
         "setuptools",
         "z3c.form",
-        "zope.deprecation",
         "zope.i18nmessageid",
     ],
     extras_require={
-        "test": ["plone.app.testing"],
+        "test": [],
         "schemaeditor": ["plone.schemaeditor"],
         "supermodel": ["plone.supermodel"],
     },
