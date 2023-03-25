@@ -57,7 +57,7 @@ class JSONField(Field):
             >>> JSONField().fromUnicode('{"items": []}')
             {'items': []}
 
-        or it can be a Pyhon dict stored as string:
+        or it can be a Python dict stored as string:
 
             >>> JSONField().fromUnicode("{'items': []}")
             {'items': []}
