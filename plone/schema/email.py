@@ -1,10 +1,14 @@
-from plone.schema import _
+from zope.i18nmessageid import MessageFactory
 from zope.interface import implementer
 from zope.schema import NativeStringLine
 from zope.schema.interfaces import IFromUnicode
 from zope.schema.interfaces import INativeStringLine
 from zope.schema.interfaces import ValidationError
+
 import re
+
+
+_ = MessageFactory("plone")
 
 # Taken from http://www.regular-expressions.info/email.html
 _isemail = r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}"
@@ -12,8 +16,7 @@ _isemail = re.compile(_isemail).match
 
 
 class IEmail(INativeStringLine):
-    """A field containing an email address
-    """
+    """A field containing an email address"""
 
 
 class InvalidEmail(ValidationError):
@@ -22,11 +25,10 @@ class InvalidEmail(ValidationError):
 
 @implementer(IEmail, IFromUnicode)
 class Email(NativeStringLine):
-    """Email schema field
-    """
+    """Email schema field"""
 
     def _validate(self, value):
-        super(Email, self)._validate(value)
+        super()._validate(value)
         if _isemail(value):
             return
 

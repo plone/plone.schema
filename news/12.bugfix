@@ -1,0 +1,3 @@
+Fix #12: no transitive circular dependency over `plone.app.z3c.form` anymore.
+This removes the registration on `IPloneFormLayer` and uses the base layer of z3c.form `IFormLayer`.
+[jensens]

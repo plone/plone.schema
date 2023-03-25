@@ -1,3 +1,4 @@
+from ..interfaces import IFormLayer
 from z3c.form.browser.text import TextWidget
 from z3c.form.interfaces import IFieldWidget
 from z3c.form.interfaces import ITextWidget
@@ -6,20 +7,18 @@ from zope.component import adapter
 from zope.interface import implementer
 from zope.schema.interfaces import IURI
 
-from plone.app.z3cform.interfaces import IPloneFormLayer
-
 
 class IURIWidget(ITextWidget):
-    """ URI Widget """
+    """URI Widget"""
 
 
 @implementer(IURIWidget)
 class URIWidget(TextWidget):
-    klass = u'uri-widget'
+    klass = "uri-widget"
     value = None
 
 
-@adapter(IURI, IPloneFormLayer)
+@adapter(IURI, IFormLayer)
 @implementer(IFieldWidget)
 def URIFieldWidget(field, request):
     return FieldWidget(field, URIWidget(request))
