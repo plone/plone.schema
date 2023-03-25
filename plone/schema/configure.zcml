@@ -7,9 +7,7 @@
     >
 
   <!-- Configure widgets -->
-  <include
-      package=".browser"
-      />
+  <include package=".browser" />
 
   <!-- Configure plone.supermodel support if available -->
   <configure zcml:condition="installed plone.supermodel">

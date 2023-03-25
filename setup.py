@@ -34,15 +34,15 @@ setup(
     namespace_packages=["plone"],
     include_package_data=True,
     zip_safe=False,
+    python_requires=">=3.8",
     install_requires=[
         "jsonschema",
         "setuptools",
         "z3c.form",
-        "zope.deprecation",
         "zope.i18nmessageid",
     ],
     extras_require={
-        "test": ["plone.app.testing"],
+        "test": [],
         "schemaeditor": ["plone.schemaeditor"],
         "supermodel": ["plone.supermodel"],
     },
