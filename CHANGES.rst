@@ -5,6 +5,34 @@
 
 .. towncrier release notes start
 
+2.0.0 (2023-04-06)
+------------------
+
+Breaking changes:
+
+
+- Drop Python 2 support.
+  Housecleaning: pyupgrade, isort, black.
+  Introduce extras `plone.schema[supermodel]` and `plone.schema[schemaeditor]`.
+  The package works in its vanilla installation as an addon for z3c.form, without any other plone dependencies.
+  [jensens] (#17)
+
+
+Bug fixes:
+
+
+- Fix #12: no transitive circular dependency over `plone.app.z3c.form` anymore.
+  This removes the registration on `IPloneFormLayer` and uses the base layer of z3c.form `IFormLayer`.
+  [jensens] (#12)
+
+
+Internal:
+
+
+- Update configuration files.
+  [plone devs] (93ecbf56)
+
+
 1.4.0 (2022-04-28)
 ------------------
 

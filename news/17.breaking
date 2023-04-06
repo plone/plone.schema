@@ -1,5 +1,0 @@
-Drop Python 2 support.
-Housecleaning: pyupgrade, isort, black.
-Introduce extras `plone.schema[supermodel]` and `plone.schema[schemaeditor]`.
-The package works in its vanilla installation as an addon for z3c.form, without any other plone dependencies.
-[jensens]
