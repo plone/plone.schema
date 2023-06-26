@@ -4,3 +4,9 @@
 [meta]
 template = "default"
 commit-id = "cfffba8c"
+
+[flake8]
+extra_lines = """
+per-file-ignores =
+    plone/schema/__init__.py:F401
+"""
