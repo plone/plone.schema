@@ -1,5 +1,4 @@
-""" Tests
-"""
+"""Tests"""
 
 import doctest
 import unittest
