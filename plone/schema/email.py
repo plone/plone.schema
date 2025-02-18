@@ -81,7 +81,7 @@ def _isemail(value):
     if len(domain) < 3:
         return False
 
-    # Tthe maximum length of an email address that can be handled by SMTP
+    # The maximum length of an email address that can be handled by SMTP
     # is 254 characters.
     if len(value) > 254:
         return False
