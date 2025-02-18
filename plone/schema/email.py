@@ -70,15 +70,14 @@ def _isemail(value):
     if value.count("@") != 1:
         return False
 
-    # at least one dot in the domain
+    # At least one dot in the domain.  And when split on dot,
+    # each part must not be empty.
     user, domain = value.split("@")
-    if "." not in domain:
+    if not all(domain.partition(".")):
         return False
 
-    # minimum lengths for user and domain
+    # user part must not be empty
     if not user:
-        return False
-    if len(domain) < 3:
         return False
 
     # The maximum length of an email address that can be handled by SMTP

@@ -64,6 +64,7 @@ class TestEmail(unittest.TestCase):
         self.assertFalse(_isemail("arthur\t@example.org"))
         self.assertFalse(_isemail("arthur@one"))
         self.assertFalse(_isemail("arthur@example@org"))
+        self.assertFalse(_isemail("me@.me"))
         self.assertFalse(_isemail("x" * 254 + "@too.long"))
 
         # Explicitly test some examples from the docstring,
@@ -76,7 +77,7 @@ class TestEmail(unittest.TestCase):
         self.assertTrue(_isemail("jens@österreich.example.com"))
 
         # 3. allow ampersand in the user part
-        self.assertTrue(_isemail("q&a@.example.com"))
+        self.assertTrue(_isemail("q&a@example.com"))
 
         # 4. do not allows spaces.
         self.assertFalse(_isemail("test@aha.ok   hello"))
