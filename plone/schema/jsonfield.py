@@ -54,14 +54,15 @@ class JSONField(Field):
 
         Value can be a valid JSON object:
 
-            >>> JSONField().fromUnicode('{"items": []}')
-            {'items': []}
+            JSONField().fromUnicode('{"items": []}')
 
         or it can be a Python dict stored as string:
 
-            >>> JSONField().fromUnicode("{'items': []}")
-            {'items': []}
+            JSONField().fromUnicode("{'items': []}")
 
+        In both cases the result is:
+
+            {"items": []}
         """
         try:
             v = json.loads(value)
