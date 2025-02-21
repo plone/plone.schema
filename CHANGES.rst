@@ -5,6 +5,30 @@
 
 .. towncrier release notes start
 
+2.0.2 (2025-02-21)
+------------------
+
+Bug fixes:
+
+
+- Fix email validation:
+  * allow apostrophes
+  * allow accented characters
+  * allow ampersand in the user part
+  * do not allows spaces.
+  * accept TLDs with more than 4 characters
+  [maurits] (#30)
+
+
+Tests
+
+
+- Refactor the ``jsonfield`` doctest to a simpler unit test.
+  [maurits] (#5)
+- Add basic tests for the email field.
+  [maurits] (#5)
+
+
 2.0.1 (2023-10-07)
 ------------------
 

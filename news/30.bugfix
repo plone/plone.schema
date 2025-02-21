@@ -1,7 +1,0 @@
-Fix email validation:
-* allow apostrophes
-* allow accented characters
-* allow ampersand in the user part
-* do not allows spaces.
-* accept TLDs with more than 4 characters
-[maurits]
