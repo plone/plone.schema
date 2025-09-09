@@ -50,6 +50,9 @@ setup(
         "setuptools",
         "z3c.form",
         "zope.i18nmessageid",
+        "zope.interface",
+        "zope.component",
+        "zope.schema",
     ],
     extras_require={
         "test": [],
