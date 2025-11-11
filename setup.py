@@ -40,7 +40,6 @@ setup(
     python_requires=">=3.10",
     install_requires=[
         "jsonschema",
-        "setuptools",
         "z3c.form",
         "zope.i18nmessageid",
         "zope.interface",
