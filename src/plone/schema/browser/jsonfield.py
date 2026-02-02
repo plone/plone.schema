@@ -13,7 +13,6 @@ from zope.interface import implementer
 
 import json
 
-
 _ = MessageFactory("plone")
 
 
