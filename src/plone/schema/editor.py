@@ -8,7 +8,6 @@ from zope.interface import Attribute
 from zope.schema import URI
 from zope.schema.interfaces import IURI
 
-
 _ = MessageFactory("plone")
 
 

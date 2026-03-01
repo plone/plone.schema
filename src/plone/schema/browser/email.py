@@ -8,7 +8,6 @@ from zope.component import adapter
 from zope.i18nmessageid import MessageFactory
 from zope.interface import implementer
 
-
 _ = MessageFactory("plone")
 
 
