@@ -12,7 +12,6 @@ import ast
 import json
 import jsonschema
 
-
 _ = MessageFactory("plone")
 
 

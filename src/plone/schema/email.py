@@ -5,7 +5,6 @@ from zope.schema.interfaces import IFromUnicode
 from zope.schema.interfaces import INativeStringLine
 from zope.schema.interfaces import ValidationError
 
-
 _ = MessageFactory("plone")
 
 
