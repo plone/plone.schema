@@ -15,7 +15,7 @@ description = "Plone specific extensions and fields for zope schematas"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Framework :: Plone",
-    "Framework :: Plone :: 6.2",
+    "Framework :: Plone :: 6.3",
     "Framework :: Plone :: Core",
     "Framework :: Zope :: 5",
     "Programming Language :: Python",
@@ -183,7 +183,7 @@ Zope = [
 ]
 python-dateutil = ['dateutil']
 pytest-plone = ['pytest', 'zope.pytestlayer', 'plone.testing', 'plone.app.testing']
-ignore-packages = ['plone.supermodel', 'plone.schemaeditor',]
+ignore-packages = ['plone.supermodel', 'plone.schemaeditor', 'z3c.jbot',]
 
 ##
 # Add extra configuration options in .meta.toml:

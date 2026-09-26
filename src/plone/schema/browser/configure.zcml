@@ -14,21 +14,6 @@
   <adapter factory=".uri.URIFieldWidget" />
   <adapter factory=".email.EmailFieldWidget" />
   <adapter factory=".jsonfield.JSONFieldWidget" />
-
-  <z3c:widgetTemplate
-      widget=".uri.IURIWidget"
-      template="templates/uri_display.pt"
-      layer="..interfaces.IFormLayer"
-      mode="display"
-      />
-
-  <z3c:widgetTemplate
-      widget=".email.IEmailWidget"
-      template="templates/email_display.pt"
-      layer="..interfaces.IFormLayer"
-      mode="display"
-      />
-
   <adapter factory=".jsonfield.JSONDataConverter" />
 
 </configure>

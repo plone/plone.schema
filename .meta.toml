@@ -15,4 +15,4 @@ per-file-ignores =
 """
 
 [pyproject]
-dependencies_ignores = "['plone.supermodel', 'plone.schemaeditor',]"
+dependencies_ignores = "['plone.supermodel', 'plone.schemaeditor', 'z3c.jbot',]"

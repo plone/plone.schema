@@ -1,0 +1,2 @@
+Removed the Classic UI email and URI display templates. These have been
+moved to plone.app.z3cform.
