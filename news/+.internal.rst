@@ -1,0 +1,4 @@
+Package configured and tested against Plone 6.3 only. Updated configuration
+with plone.meta, removed the Classic UI email and URI display templates
+in favor of their replacements in plone.app.z3cform, and added
+z3c.jbot deprecation mappings for the removed templates.

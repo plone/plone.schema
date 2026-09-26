@@ -40,3 +40,8 @@ from zope.schema._field import Time
 from zope.schema._field import Timedelta
 from zope.schema._field import Tuple
 from zope.schema._field import URI
+
+jbot_deprecations = {
+    "plone.schema.browser.templates.email_display.pt": "plone.app.z3cform.templates.email_display.pt",
+    "plone.schema.browser.templates.uri_display.pt": "plone.app.z3cform.templates.uri_display.pt",
+}
